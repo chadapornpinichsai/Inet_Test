@@ -1,0 +1,91 @@
+@import url('https://googleapis.com');
+
+* {
+    font-family: 'Sarabun';
+    box-sizing: border-box;
+}
+body {
+    background-color: #F5F7FF;
+    width: 1440px;
+    height: 1024px;
+    margin: 0;
+}
+
+.container {
+    width: 1400px;
+    height: 1024px;
+    margin: 0 auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.sidebar {
+    width: 228px;
+    height: 984px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #e7ebfb;
+    border-radius: 20px;
+
+}
+
+.Hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img {
+    width: 155px;
+    height: 35.15px;
+    display: block;
+}
+span.bar {
+    display: block;
+    width: 18px;
+    height: 12px;
+    background-color: #20409C;
+    border-radius: 2.5px 0;
+    transition: 0.4s;
+}
+
+.menu {
+    width: 100%;
+    margin-top: 20px;
+}
+.topbar {
+    width: 1128px;
+    height: 70px;
+    margin-top: 20px;
+    margin-left: 20px;
+    justify-content: space-between;
+    padding: 8px 28px 8px 24px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.findservice img{
+        width: 32px;
+        height: 32px;
+        display: block;
+}
+
+
+.dropdown-content {
+    display: none;
+    list-style-type: none;
+}
+
+.dropdown-menu:hover .dropdown-content {
+    display: block;
+}
