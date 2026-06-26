@@ -609,77 +609,14 @@ tbody tr:hover {
     place-items: center;
     background: linear-gradient(135deg, #f4f7ff 0%, #eef3ff 100%);
     font-family: 'Sarabun', sans-serif;
-    padding: 24px;
-}
-
-.login-shell {
-    width: min(1080px, 100%);
-    display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    background: #ffffff;
-    border-radius: 32px;
-    overflow: hidden;
-    box-shadow: 0 24px 60px rgba(32, 64, 156, 0.16);
-}
-
-.login-hero {
-    padding: 40px 36px;
-    background: linear-gradient(145deg, #1f409d 0%, #2857c8 100%);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.brand-mark {
-    width: 180px;
-    margin-bottom: 20px;
-}
-
-.brand-mark img {
-    width: 100%;
-    display: block;
-    filter: brightness(0) invert(1);
-}
-
-.login-hero h1 {
-    margin: 0 0 10px;
-    font-size: 28px;
-}
-
-.login-hero p {
-    margin: 0 0 18px;
-    line-height: 1.6;
-    color: rgba(255,255,255,0.9);
-}
-
-.hero-points {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.hero-points li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255,255,255,0.95);
-}
-
-.hero-points li::before {
-    content: '•';
-    font-size: 18px;
-    color: #fff;
 }
 
 .login-card {
-    padding: 36px 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: min(420px, calc(100% - 32px));
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px 28px;
+    box-shadow: 0 16px 40px rgba(32, 64, 156, 0.12);
 }
 
 .login-card h2 {
@@ -730,11 +667,6 @@ tbody tr:hover {
     margin-top: 8px;
 }
 
-.login-actions-row {
-    display: flex;
-    gap: 10px;
-}
-
 .login-btn {
     border: 0;
     border-radius: 999px;
@@ -753,27 +685,11 @@ tbody tr:hover {
 .login-btn.secondary {
     background: #e8efff;
     color: #20409c;
-    flex: 1;
 }
 
 .login-btn.ghost {
     background: #f7f9fc;
     color: #4c5f83;
-    flex: 1;
-}
-
-@media (max-width: 840px) {
-    .login-shell {
-        grid-template-columns: 1fr;
-    }
-
-    .login-hero {
-        padding: 28px 24px;
-    }
-
-    .login-card {
-        padding: 28px 24px;
-    }
 }
 
 .pagination-bar {

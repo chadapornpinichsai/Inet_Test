@@ -10,12 +10,11 @@
 
 body{
     width:100%;
-    height:100vh;
+    height: auto;
     display:flex;
     justify-content:center;
     align-items:center;
     background:#f5f7fc;
-    overflow:hidden;
     position:relative;
 }
 
@@ -42,11 +41,9 @@ body::after{
     right:-150px;
 }
 
-/* กล่องหลัก */
 .container{
-    width:900px;
-    max-width:95%;
-    height:520px;
+    width:922px;
+    height:592px;
     background:#fff;
     border-radius:18px;
     overflow:hidden;
@@ -54,12 +51,13 @@ body::after{
     box-shadow:0 15px 35px rgba(0,0,0,.12);
     position:relative;
     z-index:2;
+    margin-top: 50px;
 }
 
 /* ฝั่งซ้าย */
 .left-panel{
     width:50%;
-    background:#252f90;
+    background:#201E91;
     color:#fff;
     position:relative;
     display:flex;
@@ -71,21 +69,35 @@ body::after{
 
 .manage-logo{
     position:absolute;
-    top:20px;
-    left:20px;
+    top:0;
+    left:0;
+    margin-left: 30px;
+    width:86px;
+    height:94px;
+    background:#ffffff;
+    border-radius:0 0 42px 42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px 14px 16px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.14);
 }
 
 .manage-logo img{
-    width:60px;
+    width:100%;
+    height:auto;
+    object-fit:contain;
 }
 
+
 .robot img{
-    width:260px;
+    width:auto;
     max-width:100%;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .left-panel h2{
-    margin-top:25px;
     font-size:26px;
     font-weight:600;
     letter-spacing:1px;
