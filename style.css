@@ -1,4 +1,3 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
 
 *{
@@ -18,7 +17,6 @@ body{
     position:relative;
 }
 
-/* พื้นหลังวงกลม */
 body::before{
     content:'';
     position:absolute;
@@ -54,7 +52,6 @@ body::after{
     margin-top: 50px;
 }
 
-/* ฝั่งซ้าย */
 .left-panel{
     width:50%;
     background:#201E91;
@@ -103,7 +100,6 @@ body::after{
     letter-spacing:1px;
 }
 
-/* ฝั่งขวา */
 .right-panel{
     width:50%;
     background:#fff;
@@ -131,7 +127,6 @@ body::after{
     vertical-align:middle;
 }
 
-/* ปุ่ม */
 .btn{
     width:100%;
     max-width:300px;
@@ -145,7 +140,6 @@ body::after{
     font-weight:500;
 }
 
-/* ลงชื่อเข้าใช้ */
 .login-btn{
     background:#2d4cb3;
     color:#fff;
@@ -155,7 +149,6 @@ body::after{
     background:#1d3790;
 }
 
-/* ลงทะเบียน */
 .register-btn{
     border:2px solid #2d4cb3;
     color:#2d4cb3;
@@ -166,7 +159,6 @@ body::after{
     background:#eef4ff;
 }
 
-/* เส้นแบ่ง */
 .divider{
     width:100%;
     max-width:300px;
@@ -197,7 +189,6 @@ body::after{
     background:#ddd;
 }
 
-/* ONE ID */
 .oneid-btn{
     display:flex;
     justify-content:center;
