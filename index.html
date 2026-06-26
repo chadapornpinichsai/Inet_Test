@@ -12,11 +12,13 @@
 <body>
         <div class="container">
             <aside class="sidebar">
-                <button id="sidebar-toggle" class="sidebar-toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <div class="logo">
-                    <img src="images/1LifeSystem.png" alt="logo">
+                <div class="sidebar-header">
+                    <button id="sidebar-toggle" class="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="logo">
+                        <img src="images/1LifeSystem.png" alt="logo">
+                    </div>
                 </div>
                 <nav class="side=nav">
                     <ul>
@@ -69,7 +71,7 @@
                             <img src="images/user.png" alt="user">
                             <div class="user-info">
                                 <span class="name">นายพัธรนัส จิตภักดี</span>
-                                <span class="rolw">เจ้าหน้าที่รังสี</span>
+                                <span class="role">เจ้าหน้าที่รังสี</span>
                             </div>
                             <i class="fi fi-br-angle-small-down"></i>
                         </div>
@@ -108,7 +110,7 @@
                             </div>
                             <div class="card-details">
                                 <span class="card-label">รายการทั้งหมด</span>
-                                <span class="card-value">85 <small>เคส</small></span>
+                                <span class="card-value1">85 <small>เคส</small></span>
                             </div>
                         </div>
                         <div class="card card-orange">
@@ -117,7 +119,7 @@
                             </div>
                             <div class="card-details">
                                 <span class="card-label">รอยืนยันผล</span>
-                                <span class="card-value">40 <small>เคส</small></span>
+                                <span class="card-value2">40 <small>เคส</small></span>
                             </div>
                         </div>
                         <div class="card card-green">
@@ -126,7 +128,7 @@
                             </div>
                             <div class="card-details">
                                 <span class="card-label">ยืนยันผลวินิจฉัย</span>
-                                <span class="card-value">45 <small>เคส</small></span>
+                                <span class="card-value3">45 <small>เคส</small></span>
                             </div>
                         </div>
                     </div>
@@ -147,9 +149,12 @@
                                 </select>
                             </div>
                             <button class="btn-ghost">
-                                <i class="fi fi-rr-filter"></i> ตัวกรองขั้นสูง
+                                <i class="fi fi-rr-filter"></i> <span>ตัวกรองขั้นสูง</span>
                             </button>
                         </div>
+                        <button class="btn-ghost1">
+                            <i class="fi fi-rr-inbox-out"></i> Export 
+                        </button>
                     </div>
 
                     <div class="table-wrapper">
@@ -205,7 +210,7 @@
                                     <td><span class="badge badge-pending"><i class="fi fi-rr-clock-five"></i> รอยืนยันผล</span></td>
                                     <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
                                     <td>04/03/2567 10:00</td>
-                                    <td><a href="#" class="action-link"><<i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
                                 </tr>
                                 <tr>
                                     <td>A123456</td>
