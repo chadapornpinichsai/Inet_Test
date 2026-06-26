@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INET Test</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/all/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="scripts.js"></script>
+</head>
+<body>
+        <div class="container">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <button id="sidebar-toggle" class="sidebar-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="logo">
+                        <img src="images/1LifeSystem.png" alt="logo">
+                    </div>
+                </div>
+                <nav class="side=nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="nav-item">
+                                <i class="fi fi-rr-category-alt"></i>
+                                <span> Dashboard</span>
+                            </a>
+                        </li>
+                        <li id="xraydropdown" class="menudropdown">
+                            <div class="dropdown-haeder">
+                                <i class="fi fi-sr-poll-h"></i>
+                                <span> รายการ X-ray</span>
+                                <i class="fi fi-br-angle-small-down"></i>
+                            </div>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#" class="nav=item submenu-item active">
+                                        <span>รายการ X-ray ที่นำเข้า</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav=item submenu-item active">
+                                        <span>รายการ รอ X-ray</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <nav class="topbar">
+                    <div class="findservice">
+                        <div class="unit-selector">
+                            <img src="images/findservice.png" alt="findservice"> :
+                            <select>
+                                <option>หน่วยบริการ A</option>
+                                <option>หน่วยบริการ B</option>
+                                <option>หน่วยบริการ C</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="topbar-right">
+                        <div class="notification">
+                            <i class="fi fi-rr-bell"></i>
+                        </div>
+                        <div class="user-profile">
+                            <img src="images/user.png" alt="user">
+                            <div class="user-info">
+                                <span class="name">นายพัธรนัส จิตภักดี</span>
+                                <span class="role">เจ้าหน้าที่รังสี</span>
+                            </div>
+                            <i class="fi fi-br-angle-small-down"></i>
+                        </div>
+                    </div>
+                </nav>
+
+                <div class="content-body">
+                    <header class="content-header">
+                        <h1>รายการ X-ray ที่นำเข้า</h1>
+                        <button class="btn-primary">
+                            <i class="fi fi-rr-cloud-upload-alt"></i>
+                            อัปโหลดฟิล์ม X-ray
+                            <i class="fi fi-br-angle-small-down"></i>
+                        </button>
+                    </header>
+
+                    <div class="tabs-container">
+                        <div class="tab active" data-category="brain">
+                            <span>รายการ X-ray สมอง</span>
+                            <span class="count"> 85 </span>
+                        </div>
+                        <div class="tab" data-category="chest">
+                            <span>รายการ X-ray ทรวงอก</span>
+                            <span class="count"> 120 </span>
+                        </div>
+                        <div class="tab" data-category="eye">
+                            <span>รายการ X-ray ดวงตา</span>
+                            <span class="count"> 25 </span>
+                        </div>
+                    </div>
+
+                    <div class="sum-grid">
+                        <div class="card card-blue">
+                            <div class="card-icon">
+                                <img src="images/brain.png" alt="All">
+                            </div>
+                            <div class="card-details">
+                                <span class="card-label">รายการทั้งหมด</span>
+                                <span class="card-value1">85 <small>เคส</small></span>
+                            </div>
+                        </div>
+                        <div class="card card-orange">
+                            <div class="card-icon">
+                                <img src="images/wait.png" alt="Wait">
+                            </div>
+                            <div class="card-details">
+                                <span class="card-label">รอยืนยันผล</span>
+                                <span class="card-value2">40 <small>เคส</small></span>
+                            </div>
+                        </div>
+                        <div class="card card-green">
+                            <div class="card-icon">
+                                <img src="images/finish.png" alt="finish">
+                            </div>
+                            <div class="card-details">
+                                <span class="card-label">ยืนยันผลวินิจฉัย</span>
+                                <span class="card-value3">45 <small>เคส</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-bar">
+                        <div class="filter-left">
+                            <div class="search-box">
+                                <input type="text" id="searchInput" placeholder="ค้นหา">
+                                <i class="fi fi-br-search"></i>
+                            </div>
+                            <div class="dropdown-filter">
+                                <label>ความเร่งด่วนของเคส : </label>
+                                <select id="urgencyFilter">
+                                    <option>ทั้งหมด</option>
+                                    <option>ด่วนที่สุด</option>
+                                    <option>ด่วน</option>
+                                    <option>ปกติ</option>
+                                </select>
+                            </div>
+                            <button class="btn-ghost">
+                                <i class="fi fi-rr-filter"></i> <span>ตัวกรองขั้นสูง</span>
+                            </button>
+                        </div>
+                        <button class="btn-ghost1">
+                            <i class="fi fi-rr-inbox-out"></i> Export 
+                        </button>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table id="xraytable">
+                            <thead>
+                                <tr>
+                                    <th>เลขที่รายการ <i class="fi fi-rs-info"></i></th>
+                                    <th>ชื่อผู้ป่วย</th>
+                                    <th>H/N</th>
+                                    <th>ประะเภท X-ray</th>
+                                    <th>สถานะรายการ</th>
+                                    <th>ผลลัพธ์ <i class="fi fi-rs-info"></i></th>
+                                    <th>วันที่ X-ray</th>
+                                    <th>จัดการ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="dot dot-green"></span> A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>X-ray , 2D</td>
+                                    <td><span class="badge badge-pending"><i class="fi fi-rr-clock-five"></i> รอยืนยันผล</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="dot dot-green"></span> A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>MRI , 3D</td>
+                                    <td><span class="badge badge-confirmed"><i class="fi fi-br-check-circle"></i> ยืนยันผลแล้ว</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="dot dot-green"></span> A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>CT Scan , 2D</td>
+                                    <td><span class="badge badge-confirmed"><i class="fi fi-br-check-circle"></i> ยืนยันผลแล้ว</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                                <tr>
+                                    <td>A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>CT Scan , 3D</td>
+                                    <td><span class="badge badge-pending"><i class="fi fi-rr-clock-five"></i> รอยืนยันผล</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                                <tr>
+                                    <td>A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>MRI , 3D</td>
+                                    <td><span class="badge badge-pending"><i class="fi fi-rr-clock-five"></i> รอยืนยันผล</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                                <tr>
+                                    <td>A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>X-ray , 2D</td>
+                                    <td><span class="badge badge-confirmed"><i class="fi fi-br-check-circle"></i> ยืนยันผลแล้ว</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                                <tr>
+                                    <td>A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>CT Scan , 2D</td>
+                                    <td><span class="badge badge-confirmed"><i class="fi fi-br-check-circle"></i> ยืนยันผลแล้ว</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                                <tr>
+                                    <td>A123456</td>
+                                    <td>THANYANATTHA TH...</td>
+                                    <td>H/N</td>
+                                    <td>X-ray , 2D</td>
+                                    <td><span class="badge badge-pending"><i class="fi fi-rr-clock-five"></i> รอยืนยันผล</span></td>
+                                    <td class="text-success"><span class="dot dot-green"></span> ไม่พบโรค</td>
+                                    <td>04/03/2567 10:00</td>
+                                    <td><a href="#" class="action-link"><i class="fi fi-ss-eye"></i> รายละเอียด</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination-bar">
+                        <div class="page-size">
+                            แสดงทั้งหมด
+                            <select>
+                                <option>10 / page</option>
+                                <option>20 / page</option>
+                                <option>50 / page</option>
+                            </select>
+                        </div>
+                        <div class="pagination-controls">
+                            <button class="page-btn">Prev</button>
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+</body>
+</html>
